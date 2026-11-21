@@ -51,9 +51,13 @@ Acceptance checks covered: Phase 0 import (46 records, source hash unchanged), d
 - Git initialized locally on branch `main`.
 - Initial commit: `0d6672f` — "Initial import: HMX Predictor Phase 1 + Phase 2 reliability, SQLite integrity, CI workflows".
 - Remote was added as `origin` pointing to the URL you supplied.
-- Push result: see `GITHUB_SETUP_GUIDE.md` (the final report at the end of this session states the actual outcome).
+- **Push succeeded.** Our code is on remote branch `main` at commit `7a3e276`.
+  The old remote branch `main-/-root` was left untouched; the repository HEAD still
+  points to that old branch, so you may want to change the default branch to `main`
+  or open a Pull Request from `main` into `main-/-root`.
 - No secrets, runtime SQLite files, logs or backups were committed.
-- GitHub Actions: configured (files present); actual cloud run status can only be confirmed on GitHub after the push.
+- GitHub Actions: configured (files present). Actual cloud run status must be confirmed
+  on GitHub; no Actions job was executed locally in this session.
 
 ## 6. Known limitations / blockers
 

@@ -9,12 +9,14 @@
 5. First commit: `0d6672f` on branch `main`.
 6. Remote `origin` was added with the URL you gave:
    `https://github.com/tanishka1233/Colour-prediction-.git`
+7. **Push succeeded.** Our code is on remote branch `main` (commit `7a3e276`).
 
 ## What exists on GitHub right now
 
 The remote already had a branch called `main-/-root` containing only `1.html` and `README.md`.
-We did **not** delete, reset or overwrite it. Our work is pushed as a **new branch** called `main`
-(or another name if a push needed a different target — see final report).
+We did **not** delete, reset or overwrite it. Our work was pushed as a **new branch** `main`.
+`git ls-remote` shows both branches. GitHub still reports the old `main-/-root` as the
+repository HEAD, so the default branch has not changed automatically.
 
 ## How to push (if it was not already done)
 

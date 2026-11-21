@@ -1,4 +1,4 @@
-# HMX Predictor — Phase 1
+# HMX Predictor — Phase 2
 
 Read-only statistical analysis application for Maanwin WinGo 1M, built from the
 completed Phase 0 investigation in `investigation/`.
@@ -44,6 +44,12 @@ HMX_COLLECTOR_AUTOSTART=1 python3 -m hmx.cli serve
 | `python3 -m hmx.cli status` | collector + feed health |
 | `python3 -m hmx.cli backtest` | exploratory walk-forward replay |
 | `python3 -m hmx.cli serve` | API + web UI |
+| `python3 -m hmx.cli collect-history` | historical-only read-only collection summary |
+| `python3 -m hmx.cli db-check` | SQLite integrity + consistency check |
+| `python3 -m hmx.cli backup` | consistent database backup |
+| `python3 -m hmx.cli restore FILE --force` | restore a backup (test DB recommended) |
+| `python3 -m hmx.cli stats` | full prediction/evaluation lifecycle report |
+| `python3 scripts/secret_scan.py` | scan files before committing |
 
 ## API
 
@@ -66,10 +72,12 @@ HMX_COLLECTOR_AUTOSTART=1 python3 -m hmx.cli serve
 python3 -m unittest discover -s tests -v
 ```
 
-41 tests cover feed parsing, ETag/304, backoff, throttling, schema validation,
-duplicate/conflict handling, missing periods, period transitions, leakage
-prevention, probability normalization, immutability, evaluation, import/export
-and the HTTP API. CI runs the same command via GitHub Actions.
+61 tests cover feed parsing, ETag/304, backoff, throttling, restart recovery,
+schema validation, duplicate/conflict handling, missing periods, period
+transitions, late-prediction exclusion, leakage prevention, probability
+normalization, immutability, evaluation, backup/restore, CLI commands,
+import/export, the HTTP API and workflow sanity. CI runs the same command via
+GitHub Actions.
 
 ## Directory map
 
@@ -90,4 +98,12 @@ logs/                structured JSONL logs (gitignored)
 investigation/       original Phase 0 artifacts (read-only, untouched)
 ```
 
-See `DEPLOYMENT.md` and `IMPLEMENTATION_REPORT.md` for details and limitations.
+## Phase 2 documentation
+
+- `PHASE2_IMPLEMENTATION_REPORT.md`
+- `GITHUB_SETUP_GUIDE.md`
+- `GITHUB_ACTIONS_GUIDE.md`
+- `LOCAL_RUNTIME_GUIDE.md`
+- `DATA_COLLECTION_GUIDE.md`
+
+See `DEPLOYMENT.md` and `IMPLEMENTATION_REPORT.md` for Phase 1 details and limitations.
