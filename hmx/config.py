@@ -61,6 +61,10 @@ class Config:
     port: int = _env_int("HMX_PORT", 8765)
     rate_limit_per_minute: int = _env_int("HMX_RATE_LIMIT_PER_MINUTE", 120)
 
+    # Model selection (Phase 3: validated only when evidence supports it)
+    model_name: str = _env("HMX_MODEL_NAME", "hybrid")
+    model_validation_status: str = _env("HMX_MODEL_VALIDATION_STATUS", "unproven")
+
     # Engine defaults (can be overridden per prediction via config JSON)
     min_history: int = _env_int("HMX_MIN_HISTORY", 30)
     analysis_window: int = _env_int("HMX_ANALYSIS_WINDOW", 200)

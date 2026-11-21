@@ -186,7 +186,8 @@ class Collector:
             "recency_tau": config.recency_tau,
             "dirichlet_alpha": config.dirichlet_alpha,
             "weights": config.engine_weights,
-        })
+        }, model_name=config.model_name,
+           validation_status=config.model_validation_status)
         self.client = client or FeedClient(
             min_interval=config.poll_interval_seconds, timeout=config.request_timeout_seconds,
             max_retries=config.max_retries, backoff_base=config.backoff_base_seconds,

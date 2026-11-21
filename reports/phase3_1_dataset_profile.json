@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-11-21T07:39:20+00:00",
+  "total_records": 68,
+  "earliest_period": "20261121100010270",
+  "latest_period": "20261121100010434",
+  "period_span": 165,
+  "missing_periods": [
+    [
+      "20261121100010302",
+      "20261121100010325",
+      22
+    ],
+    [
+      "20261121100010337",
+      "20261121100010343",
+      5
+    ],
+    [
+      "20261121100010354",
+      "20261121100010425",
+      70
+    ]
+  ],
+  "missing_period_count": 97,
+  "coverage_pct": 41.21,
+  "longest_continuous_sequence": 33,
+  "duplicate_period_count": 0,
+  "conflicting_result_count": 0,
+  "invalid_result_count": 0,
+  "invalid_periods": [],
+  "number_distribution": {
+    "counts": [
+      5,
+      3,
+      9,
+      2,
+      9,
+      5,
+      9,
+      10,
+      7,
+      9
+    ],
+    "sample_size": 68,
+    "proportions": [
+      0.0735,
+      0.0441,
+      0.1324,
+      0.0294,
+      0.1324,
+      0.0735,
+      0.1324,
+      0.1471,
+      0.1029,
+      0.1324
+    ],
+    "expected_uniform": 6.8,
+    "chi_square": {
+      "statistic": 10.8235,
+      "df": 9,
+      "p_value": 0.287999,
+      "expected_per_category": 6.8,
+      "sample_size": 68,
+      "limitation": ""
+    },
+    "entropy": {
+      "entropy": 2.2118,
+      "normalized": 0.9606,
+      "effective_outcomes": 9.132,
+      "max_entropy": 2.3026
+    },
+    "wilson_95": [
+      {
+        "lower": 0.03181437515487155,
+        "upper": 0.160853939581994,
+        "n": 68
+      },
+      {
+        "lower": 0.0151163456535321,
+        "upper": 0.12187392182380694,
+        "n": 68
+      },
+      {
+        "lower": 0.07122163958543325,
+        "upper": 0.2328027696704853,
+        "n": 68
+      },
+      {
+        "lower": 0.008103009605045342,
+        "upper": 0.10104823424253043,
+        "n": 68
+      },
+      {
+        "lower": 0.07122163958543325,
+        "upper": 0.2328027696704853,
+        "n": 68
+      },
+      {
+        "lower": 0.03181437515487155,
+        "upper": 0.160853939581994,
+        "n": 68
+      },
+      {
+        "lower": 0.07122163958543325,
+        "upper": 0.2328027696704853,
+        "n": 68
+      },
+      {
+        "lower": 0.08188729839104542,
+        "upper": 0.2499761344946364,
+        "n": 68
+      },
+      {
+        "lower": 0.05076512677817478,
+        "upper": 0.19758123521821724,
+        "n": 68
+      },
+      {
+        "lower": 0.07122163958543325,
+        "upper": 0.2328027696704853,
+        "n": 68
+      }
+    ]
+  },
+  "colour_distribution": {
+    "counts": [
+      34,
+      24,
+      5,
+      5
+    ],
+    "sample_size": 68,
+    "proportions": [
+      0.5,
+      0.3529,
+      0.0735,
+      0.0735
+    ],
+    "expected_uniform": 17.0,
+    "chi_square": {
+      "statistic": 36.8235,
+      "df": 3,
+      "p_value": 0.0,
+      "expected_per_category": 17.0,
+      "sample_size": 68,
+      "limitation": ""
+    },
+    "entropy": {
+      "entropy": 1.098,
+      "normalized": 0.792,
+      "effective_outcomes": 2.998,
+      "max_entropy": 1.3863
+    },
+    "wilson_95": [
+      {
+        "lower": 0.3843786388809909,
+        "upper": 0.6156213611190091,
+        "n": 68
+      },
+      {
+        "lower": 0.2500181058015448,
+        "upper": 0.4715916579008227,
+        "n": 68
+      },
+      {
+        "lower": 0.03181437515487155,
+        "upper": 0.160853939581994,
+        "n": 68
+      },
+      {
+        "lower": 0.03181437515487155,
+        "upper": 0.160853939581994,
+        "n": 68
+      }
+    ]
+  },
+  "size_distribution": {
+    "counts": [
+      28,
+      40
+    ],
+    "sample_size": 68,
+    "proportions": [
+      0.4118,
+      0.5882
+    ],
+    "expected_uniform": 34.0,
+    "chi_square": {
+      "statistic": 2.1176,
+      "df": 1,
+      "p_value": 0.14561,
+      "expected_per_category": 34.0,
+      "sample_size": 68,
+      "limitation": ""
+    },
+    "entropy": {
+      "entropy": 0.6775,
+      "normalized": 0.9774,
+      "effective_outcomes": 1.969,
+      "max_entropy": 0.6931
+    },
+    "wilson_95": [
+      {
+        "lower": 0.3025783771245051,
+        "upper": 0.5303874810969154,
+        "n": 68
+      },
+      {
+        "lower": 0.4696125189030847,
+        "upper": 0.6974216228754949,
+        "n": 68
+      }
+    ]
+  },
+  "odd_even_distribution": {
+    "counts": [
+      39,
+      29
+    ],
+    "sample_size": 68,
+    "proportions": [
+      0.5735,
+      0.4265
+    ],
+    "expected_uniform": 34.0,
+    "chi_square": {
+      "statistic": 1.4706,
+      "df": 1,
+      "p_value": 0.225253,
+      "expected_per_category": 34.0,
+      "sample_size": 68,
+      "limitation": ""
+    },
+    "entropy": {
+      "entropy": 0.6823,
+      "normalized": 0.9843,
+      "effective_outcomes": 1.978,
+      "max_entropy": 0.6931
+    },
+    "wilson_95": [
+      {
+        "lower": 0.455165693769645,
+        "upper": 0.6840294243791712,
+        "n": 68
+      },
+      {
+        "lower": 0.31597057562082875,
+        "upper": 0.5448343062303549,
+        "n": 68
+      }
+    ]
+  },
+  "sources": {
+    "https://draw.ar-lottery01.com/WinGo/WinGo_1M/GetHistoryIssuePage.json": 68
+  },
+  "retrieved_at_min": "2026-11-21T04:39:05+00:00",
+  "retrieved_at_max": "2026-11-21T07:14:09.607+00:00",
+  "mapping_verification": {
+    "odd_green_even_red": true,
+    "zero_red_violet": true,
+    "five_green_violet": true,
+    "small_0_4_big_5_9": true,
+    "stored_rows_conform": true
+  },
+  "limitations": [
+    "Public feed exposes only the latest 10 results; gaps are expected.",
+    "Missing periods are reported, never filled with invented data.",
+    "Small samples make distribution tests low-powered."
+  ]
+}

@@ -16,6 +16,8 @@ FIELDS = [
 
 
 def parse_csv(text: str) -> list[dict]:
+    # Metadata lines emitted by export_csv_with_metadata start with '#'.
+    text = "\n".join(line for line in text.splitlines() if not line.startswith("#"))
     reader = csv.DictReader(io.StringIO(text))
     if not reader.fieldnames or "period_id" not in reader.fieldnames:
         raise ValueError("CSV must contain a period_id column")

@@ -9,7 +9,11 @@ from .app import AppState, serve
 from .collector import collect_history_once
 from .config import CONFIG
 from .db import Store
+from .dataset import export_csv_with_metadata, export_json_with_metadata, export_metadata, profile
 from .evaluation import evaluation_report, summarize, walk_forward
+from .models import MODEL_NAMES
+from .research import explore
+from .validation import walk_forward_compare
 from .importer import import_file
 from .logging_util import JsonLogger
 
@@ -36,6 +40,16 @@ def main(argv: list[str] | None = None) -> int:
     p_rs.add_argument("source")
     p_rs.add_argument("--force", action="store_true", help="overwrite a non-empty database")
     sub.add_parser("stats", help="print full prediction/evaluation lifecycle report")
+    p_ds = sub.add_parser("dataset-report", help="Phase 3.1 dataset quality profile")
+    p_ds.add_argument("--output")
+    p_exp = sub.add_parser("export-dataset", help="export results with metadata")
+    p_exp.add_argument("--format", choices=["csv", "json"], default="json")
+    p_exp.add_argument("--output")
+    p_res = sub.add_parser("research", help="Phase 3.2 exploratory pattern analysis")
+    p_res.add_argument("--output")
+    p_cmp = sub.add_parser("model-compare", help="Phase 3.2 chronological model comparison")
+    p_cmp.add_argument("--min-train", type=int, default=30)
+    p_cmp.add_argument("--output")
     args = parser.parse_args(argv)
 
     CONFIG.ensure_dirs()
@@ -101,6 +115,42 @@ def main(argv: list[str] | None = None) -> int:
         evaluations = store.get_evaluations(1000)
         wf = summarize(walk_forward(store.all_results()))
         print(json.dumps(evaluation_report(predictions, evaluations, walk_forward_summary=wf), indent=2))
+    elif args.command == "dataset-report":
+        text = json.dumps(profile(store.all_results()), indent=2)
+        print(text)
+        if args.output:
+            from pathlib import Path
+            out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+    elif args.command == "export-dataset":
+        rows = store.all_results()
+        meta = export_metadata(rows)
+        text = export_csv_with_metadata(rows, meta) if args.format == "csv" else export_json_with_metadata(rows, meta)
+        if args.output:
+            from pathlib import Path
+            out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+            print(json.dumps({"output": str(out), "records": len(rows), "format": args.format}, indent=2))
+        else:
+            print(text)
+    elif args.command == "research":
+        text = json.dumps(explore(store.all_results()), indent=2)
+        print(text)
+        if args.output:
+            from pathlib import Path
+            out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+    elif args.command == "model-compare":
+        text = json.dumps(walk_forward_compare(
+            store.all_results(), min_train=args.min_train,
+            config={"min_history": CONFIG.min_history, "analysis_window": CONFIG.analysis_window,
+                    "recency_tau": CONFIG.recency_tau, "dirichlet_alpha": CONFIG.dirichlet_alpha,
+                    "weights": CONFIG.engine_weights}), indent=2)
+        print(text)
+        if args.output:
+            from pathlib import Path
+            out = Path(args.output); out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
     return 0
 
 

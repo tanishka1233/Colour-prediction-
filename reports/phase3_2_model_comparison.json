@@ -1,0 +1,600 @@
+{
+  "generated_at": "2026-11-21T07:39:01.630874+00:00",
+  "model_version": "hmx-models-1.0.0",
+  "evaluation_count": 38,
+  "min_train": 30,
+  "window_size": null,
+  "period_range_evaluated": [
+    "20261121100010300",
+    "20261121100010434"
+  ],
+  "baseline": "uniform",
+  "models": {
+    "uniform": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.07894736842105263,
+      "colour_accuracy": 0.631578947368421,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 2.302585,
+      "mean_brier": 0.9,
+      "log_loss_vs_baseline": 0.0,
+      "brier_vs_baseline": 0.0,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "n": 38
+      },
+      "expected_calibration_error": 0.0711,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 2.3026,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 2.3026,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.3026,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.3026,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 3,
+        "incorrect_number": 35,
+        "correct_colour": 24,
+        "correct_size": 18,
+        "exact_accuracy": 0.07894736842105263,
+        "colour_accuracy": 0.631578947368421,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 2.3025850929940455,
+        "mean_brier": 0.9,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 38,
+            "hit_rate": 0.07894736842105263
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      }
+    },
+    "frequency": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.07894736842105263,
+      "colour_accuracy": 0.5263157894736842,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 3.316148,
+      "mean_brier": 0.924528,
+      "log_loss_vs_baseline": 1.013562,
+      "brier_vs_baseline": 0.024528,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": -0.012123,
+        "upper": 2.51963,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": -0.005964,
+        "upper": 0.058665,
+        "n": 38
+      },
+      "expected_calibration_error": 0.0842,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 3.7868,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 3.8078,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.4959,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.4643,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 3,
+        "incorrect_number": 35,
+        "correct_colour": 20,
+        "correct_size": 18,
+        "exact_accuracy": 0.07894736842105263,
+        "colour_accuracy": 0.5263157894736842,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 3.3161475721698013,
+        "mean_brier": 0.9245283715807112,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 33,
+            "hit_rate": 0.09090909090909091
+          },
+          {
+            "bucket": 2,
+            "count": 5,
+            "hit_rate": 0.0
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 0.135996,
+      "paired_log_loss_p_adjusted_bh": 0.208839
+    },
+    "laplace": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.07894736842105263,
+      "colour_accuracy": 0.5789473684210527,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 2.400872,
+      "mean_brier": 0.916111,
+      "log_loss_vs_baseline": 0.098287,
+      "brier_vs_baseline": 0.016111,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": -0.05727,
+        "upper": 0.280635,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": -0.008494,
+        "upper": 0.043366,
+        "n": 38
+      },
+      "expected_calibration_error": 0.0711,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 2.3612,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 2.4034,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.4325,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.4339,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 3,
+        "incorrect_number": 35,
+        "correct_colour": 22,
+        "correct_size": 18,
+        "exact_accuracy": 0.07894736842105263,
+        "colour_accuracy": 0.5789473684210527,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 2.4008723166631945,
+        "mean_brier": 0.9161112571907487,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 38,
+            "hit_rate": 0.07894736842105263
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 0.248837,
+      "paired_log_loss_p_adjusted_bh": 0.248837
+    },
+    "bayesian": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.07894736842105263,
+      "colour_accuracy": 0.5789473684210527,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 2.400872,
+      "mean_brier": 0.916111,
+      "log_loss_vs_baseline": 0.098287,
+      "brier_vs_baseline": 0.016111,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": -0.05727,
+        "upper": 0.280635,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": -0.008494,
+        "upper": 0.043366,
+        "n": 38
+      },
+      "expected_calibration_error": 0.0711,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 2.3612,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 2.4034,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.4325,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.4339,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 3,
+        "incorrect_number": 35,
+        "correct_colour": 22,
+        "correct_size": 18,
+        "exact_accuracy": 0.07894736842105263,
+        "colour_accuracy": 0.5789473684210527,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 2.4008723166631945,
+        "mean_brier": 0.9161112571907487,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 38,
+            "hit_rate": 0.07894736842105263
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 0.248837,
+      "paired_log_loss_p_adjusted_bh": 0.248837
+    },
+    "recency": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.10526315789473684,
+      "colour_accuracy": 0.5526315789473685,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 3.6801,
+      "mean_brier": 0.924924,
+      "log_loss_vs_baseline": 1.377515,
+      "brier_vs_baseline": 0.024924,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": -0.018761,
+        "upper": 3.43406,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": -0.006083,
+        "upper": 0.058208,
+        "n": 38
+      },
+      "expected_calibration_error": 0.0684,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 4.3665,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 4.4224,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.4592,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.4329,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 4,
+        "incorrect_number": 34,
+        "correct_colour": 21,
+        "correct_size": 18,
+        "exact_accuracy": 0.10526315789473684,
+        "colour_accuracy": 0.5526315789473685,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 3.6801004176519605,
+        "mean_brier": 0.9249239196365405,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 29,
+            "hit_rate": 0.10344827586206896
+          },
+          {
+            "bucket": 2,
+            "count": 9,
+            "hit_rate": 0.1111111111111111
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 0.139226,
+      "paired_log_loss_p_adjusted_bh": 0.208839
+    },
+    "transition": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.02631578947368421,
+      "colour_accuracy": 0.39473684210526316,
+      "size_accuracy": 0.4473684210526316,
+      "mean_log_loss": 2.518522,
+      "mean_brier": 0.944499,
+      "log_loss_vs_baseline": 0.215937,
+      "brier_vs_baseline": 0.044499,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": 0.128156,
+        "upper": 0.297259,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": 0.027191,
+        "upper": 0.059925,
+        "n": 38
+      },
+      "expected_calibration_error": 0.1342,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 2.6037,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 2.4896,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.431,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.7058,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 1,
+        "incorrect_number": 37,
+        "correct_colour": 15,
+        "correct_size": 17,
+        "exact_accuracy": 0.02631578947368421,
+        "colour_accuracy": 0.39473684210526316,
+        "size_accuracy": 0.4473684210526316,
+        "mean_log_loss": 2.518522493742282,
+        "mean_brier": 0.9444993747503746,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 34,
+            "hit_rate": 0.029411764705882353
+          },
+          {
+            "bucket": 2,
+            "count": 4,
+            "hit_rate": 0.0
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 1e-06,
+      "paired_log_loss_p_adjusted_bh": 7e-06
+    },
+    "hybrid": {
+      "evaluation_count": 38,
+      "exact_accuracy": 0.02631578947368421,
+      "colour_accuracy": 0.47368421052631576,
+      "size_accuracy": 0.47368421052631576,
+      "mean_log_loss": 2.440237,
+      "mean_brier": 0.922677,
+      "log_loss_vs_baseline": 0.137652,
+      "brier_vs_baseline": 0.022677,
+      "bootstrap_ci_log_loss_diff": {
+        "lower": -0.022877,
+        "upper": 0.327521,
+        "n": 38
+      },
+      "bootstrap_ci_brier_diff": {
+        "lower": -0.001054,
+        "upper": 0.049374,
+        "n": 38
+      },
+      "expected_calibration_error": 0.1289,
+      "segments": [
+        {
+          "start_index": 0,
+          "size": 12,
+          "log_loss": 2.4386,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 12,
+          "size": 12,
+          "log_loss": 2.4426,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 24,
+          "size": 12,
+          "log_loss": 2.4317,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        },
+        {
+          "start_index": 36,
+          "size": 2,
+          "log_loss": 2.4877,
+          "baseline_log_loss": 2.3026,
+          "beats_baseline_log_loss": false
+        }
+      ],
+      "summary": {
+        "count": 38,
+        "evaluated": 38,
+        "late_excluded": 0,
+        "correct_number": 1,
+        "incorrect_number": 37,
+        "correct_colour": 18,
+        "correct_size": 18,
+        "exact_accuracy": 0.02631578947368421,
+        "colour_accuracy": 0.47368421052631576,
+        "size_accuracy": 0.47368421052631576,
+        "mean_log_loss": 2.440237143947763,
+        "mean_brier": 0.9226771513127897,
+        "baseline_log_loss": 2.302585092994046,
+        "baseline_brier": 0.9,
+        "calibration": [
+          {
+            "bucket": 1,
+            "count": 36,
+            "hit_rate": 0.027777777777777776
+          },
+          {
+            "bucket": 2,
+            "count": 2,
+            "hit_rate": 0.0
+          }
+        ],
+        "insufficient_data": false,
+        "note": "Descriptive metrics only; no guarantee of predictive advantage."
+      },
+      "paired_log_loss_p": 0.12106,
+      "paired_log_loss_p_adjusted_bh": 0.208839
+    }
+  },
+  "selection": {
+    "selected_model": null,
+    "decision": "no_predictive_advantage_retain_existing_model",
+    "reasons": [
+      {
+        "model": null,
+        "meets_criteria": false,
+        "reason": "only 38 evaluated predictions; need >= 100 for model selection"
+      }
+    ]
+  },
+  "leakage_controls": [
+    "records sorted by period_id",
+    "training set ends strictly before target period",
+    "no shuffling or random splits",
+    "cutoff period stored with every evaluation"
+  ],
+  "limitations": [
+    "Small chronological sample gives very low power.",
+    "Bootstrap and normal approximations are unreliable at small n.",
+    "No significance found does not prove absence of an effect."
+  ]
+}

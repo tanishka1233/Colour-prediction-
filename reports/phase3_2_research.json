@@ -1,0 +1,1263 @@
+{
+  "generated_at": "2026-11-21T07:38:59.079434+00:00",
+  "sample_size": 68,
+  "period_range": [
+    "20261121100010270",
+    "20261121100010434"
+  ],
+  "config": {
+    "min_history": 30,
+    "analysis_window": 200,
+    "recency_tau": 40.0,
+    "dirichlet_alpha": 1.0,
+    "weights": {
+      "frequency": 0.3,
+      "recency": 0.3,
+      "transition": 0.2,
+      "bayesian": 0.2
+    }
+  },
+  "distributions": {
+    "number": {
+      "counts": [
+        5,
+        3,
+        9,
+        2,
+        9,
+        5,
+        9,
+        10,
+        7,
+        9
+      ],
+      "sample_size": 68,
+      "proportions": [
+        0.0735,
+        0.0441,
+        0.1324,
+        0.0294,
+        0.1324,
+        0.0735,
+        0.1324,
+        0.1471,
+        0.1029,
+        0.1324
+      ],
+      "expected_uniform": 6.8,
+      "chi_square": {
+        "statistic": 10.8235,
+        "df": 9,
+        "p_value": 0.287999,
+        "expected_per_category": 6.8,
+        "sample_size": 68,
+        "limitation": ""
+      },
+      "entropy": {
+        "entropy": 2.2118,
+        "normalized": 0.9606,
+        "effective_outcomes": 9.132,
+        "max_entropy": 2.3026
+      },
+      "wilson_95": [
+        {
+          "lower": 0.03181437515487155,
+          "upper": 0.160853939581994,
+          "n": 68
+        },
+        {
+          "lower": 0.0151163456535321,
+          "upper": 0.12187392182380694,
+          "n": 68
+        },
+        {
+          "lower": 0.07122163958543325,
+          "upper": 0.2328027696704853,
+          "n": 68
+        },
+        {
+          "lower": 0.008103009605045342,
+          "upper": 0.10104823424253043,
+          "n": 68
+        },
+        {
+          "lower": 0.07122163958543325,
+          "upper": 0.2328027696704853,
+          "n": 68
+        },
+        {
+          "lower": 0.03181437515487155,
+          "upper": 0.160853939581994,
+          "n": 68
+        },
+        {
+          "lower": 0.07122163958543325,
+          "upper": 0.2328027696704853,
+          "n": 68
+        },
+        {
+          "lower": 0.08188729839104542,
+          "upper": 0.2499761344946364,
+          "n": 68
+        },
+        {
+          "lower": 0.05076512677817478,
+          "upper": 0.19758123521821724,
+          "n": 68
+        },
+        {
+          "lower": 0.07122163958543325,
+          "upper": 0.2328027696704853,
+          "n": 68
+        }
+      ]
+    },
+    "colour": {
+      "counts": [
+        34,
+        24,
+        5,
+        5
+      ],
+      "sample_size": 68,
+      "proportions": [
+        0.5,
+        0.3529,
+        0.0735,
+        0.0735
+      ],
+      "expected_uniform": 17.0,
+      "chi_square": {
+        "statistic": 3.0294,
+        "df": 3,
+        "p_value": 0.387113,
+        "expected_counts": [
+          27.2,
+          27.2,
+          6.8,
+          6.8
+        ],
+        "sample_size": 68,
+        "limitation": ""
+      },
+      "entropy": {
+        "entropy": 1.098,
+        "normalized": 0.792,
+        "effective_outcomes": 2.998,
+        "max_entropy": 1.3863
+      },
+      "wilson_95": [
+        {
+          "lower": 0.3843786388809909,
+          "upper": 0.6156213611190091,
+          "n": 68
+        },
+        {
+          "lower": 0.2500181058015448,
+          "upper": 0.4715916579008227,
+          "n": 68
+        },
+        {
+          "lower": 0.03181437515487155,
+          "upper": 0.160853939581994,
+          "n": 68
+        },
+        {
+          "lower": 0.03181437515487155,
+          "upper": 0.160853939581994,
+          "n": 68
+        }
+      ]
+    },
+    "size": {
+      "counts": [
+        28,
+        40
+      ],
+      "sample_size": 68,
+      "proportions": [
+        0.4118,
+        0.5882
+      ],
+      "expected_uniform": 34.0,
+      "chi_square": {
+        "statistic": 2.1176,
+        "df": 1,
+        "p_value": 0.14561,
+        "expected_counts": [
+          34.0,
+          34.0
+        ],
+        "sample_size": 68,
+        "limitation": ""
+      },
+      "entropy": {
+        "entropy": 0.6775,
+        "normalized": 0.9774,
+        "effective_outcomes": 1.969,
+        "max_entropy": 0.6931
+      },
+      "wilson_95": [
+        {
+          "lower": 0.3025783771245051,
+          "upper": 0.5303874810969154,
+          "n": 68
+        },
+        {
+          "lower": 0.4696125189030847,
+          "upper": 0.6974216228754949,
+          "n": 68
+        }
+      ]
+    },
+    "odd_even": {
+      "counts": [
+        39,
+        29
+      ],
+      "sample_size": 68,
+      "proportions": [
+        0.5735,
+        0.4265
+      ],
+      "expected_uniform": 34.0,
+      "chi_square": {
+        "statistic": 1.4706,
+        "df": 1,
+        "p_value": 0.225253,
+        "expected_counts": [
+          34.0,
+          34.0
+        ],
+        "sample_size": 68,
+        "limitation": ""
+      },
+      "entropy": {
+        "entropy": 0.6823,
+        "normalized": 0.9843,
+        "effective_outcomes": 1.978,
+        "max_entropy": 0.6931
+      },
+      "wilson_95": [
+        {
+          "lower": 0.455165693769645,
+          "upper": 0.6840294243791712,
+          "n": 68
+        },
+        {
+          "lower": 0.31597057562082875,
+          "upper": 0.5448343062303549,
+          "n": 68
+        }
+      ]
+    }
+  },
+  "transitions": {
+    "number": {
+      "observed": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0.37,
+          0.22,
+          0.67,
+          0.15,
+          0.67,
+          0.37,
+          0.67,
+          0.67,
+          0.52,
+          0.67
+        ],
+        [
+          0.22,
+          0.13,
+          0.4,
+          0.09,
+          0.4,
+          0.22,
+          0.4,
+          0.4,
+          0.31,
+          0.4
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ],
+        [
+          0.15,
+          0.09,
+          0.27,
+          0.06,
+          0.27,
+          0.15,
+          0.27,
+          0.27,
+          0.21,
+          0.27
+        ],
+        [
+          0.6,
+          0.36,
+          1.07,
+          0.24,
+          1.07,
+          0.6,
+          1.07,
+          1.07,
+          0.84,
+          1.07
+        ],
+        [
+          0.37,
+          0.22,
+          0.67,
+          0.15,
+          0.67,
+          0.37,
+          0.67,
+          0.67,
+          0.52,
+          0.67
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ],
+        [
+          0.75,
+          0.45,
+          1.34,
+          0.3,
+          1.34,
+          0.75,
+          1.34,
+          1.34,
+          1.04,
+          1.34
+        ],
+        [
+          0.52,
+          0.31,
+          0.94,
+          0.21,
+          0.94,
+          0.52,
+          0.94,
+          0.94,
+          0.73,
+          0.94
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 51.3893,
+      "df": 81,
+      "p_value": 0.995825,
+      "min_expected": 0.06,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5."
+    },
+    "colour": {
+      "observed": [
+        [
+          18,
+          9,
+          4,
+          2
+        ],
+        [
+          12,
+          9,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          16.75,
+          11.33,
+          2.46,
+          2.46
+        ],
+        [
+          12.18,
+          8.24,
+          1.79,
+          1.79
+        ],
+        [
+          2.54,
+          1.72,
+          0.37,
+          0.37
+        ],
+        [
+          2.54,
+          1.72,
+          0.37,
+          0.37
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 5.4726,
+      "df": 9,
+      "p_value": 0.791322,
+      "min_expected": 0.37,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5."
+    },
+    "size": {
+      "observed": [
+        [
+          12,
+          15
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "expected": [
+        [
+          11.28,
+          15.72
+        ],
+        [
+          16.72,
+          23.28
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 0.1309,
+      "df": 1,
+      "p_value": 0.71751,
+      "min_expected": 11.28,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5."
+    }
+  },
+  "runs": {
+    "odd_even": {
+      "runs": 30,
+      "expected_runs": 34.26,
+      "z": -1.0655,
+      "p_value": 0.28663,
+      "n": 68,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space."
+    },
+    "big_small": {
+      "runs": 32,
+      "expected_runs": 33.94,
+      "z": -0.4898,
+      "p_value": 0.624245,
+      "n": 68,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space."
+    },
+    "same_as_previous_number": {
+      "runs": 15,
+      "expected_runs": 13.54,
+      "z": 0.988,
+      "p_value": 0.32314,
+      "n": 67,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space."
+    }
+  },
+  "autocorrelation": [
+    {
+      "lag": 1,
+      "r": -0.0096,
+      "z": -0.0771,
+      "p_value": 0.938534,
+      "n": 67,
+      "limitation": "Approximate Fisher transform; multiple lags require correction."
+    },
+    {
+      "lag": 2,
+      "r": 0.0227,
+      "z": 0.1802,
+      "p_value": 0.857021,
+      "n": 66,
+      "limitation": "Approximate Fisher transform; multiple lags require correction."
+    },
+    {
+      "lag": 3,
+      "r": -0.0119,
+      "z": -0.0937,
+      "p_value": 0.92532,
+      "n": 65,
+      "limitation": "Approximate Fisher transform; multiple lags require correction."
+    },
+    {
+      "lag": 4,
+      "r": -0.0866,
+      "z": -0.6784,
+      "p_value": 0.497497,
+      "n": 64,
+      "limitation": "Approximate Fisher transform; multiple lags require correction."
+    },
+    {
+      "lag": 5,
+      "r": 0.0541,
+      "z": 0.4194,
+      "p_value": 0.67493,
+      "n": 63,
+      "limitation": "Approximate Fisher transform; multiple lags require correction."
+    }
+  ],
+  "recent_vs_older": {
+    "number_first_vs_second_half": {
+      "statistic": 9.9746,
+      "df": 9,
+      "p_value": 0.352545,
+      "min_expected": 1.0,
+      "sample_sizes": [
+        34,
+        34
+      ],
+      "limitation": "Expected counts below 5 invalidate the approximation."
+    },
+    "first_half_entropy": {
+      "entropy": 2.0782,
+      "normalized": 0.9025,
+      "effective_outcomes": 7.99,
+      "max_entropy": 2.3026
+    },
+    "second_half_entropy": {
+      "entropy": 2.178,
+      "normalized": 0.9459,
+      "effective_outcomes": 8.829,
+      "max_entropy": 2.3026
+    }
+  },
+  "rolling_windows": [
+    {
+      "start_index": 0,
+      "end_index": 19,
+      "size": 20,
+      "top_number": 7,
+      "top_count": 6,
+      "entropy": {
+        "entropy": 1.8082,
+        "normalized": 0.7853,
+        "effective_outcomes": 6.1,
+        "max_entropy": 2.3026
+      }
+    },
+    {
+      "start_index": 20,
+      "end_index": 39,
+      "size": 20,
+      "top_number": 4,
+      "top_count": 5,
+      "entropy": {
+        "entropy": 2.0389,
+        "normalized": 0.8855,
+        "effective_outcomes": 7.682,
+        "max_entropy": 2.3026
+      }
+    },
+    {
+      "start_index": 40,
+      "end_index": 59,
+      "size": 20,
+      "top_number": 2,
+      "top_count": 4,
+      "entropy": {
+        "entropy": 1.9992,
+        "normalized": 0.8682,
+        "effective_outcomes": 7.383,
+        "max_entropy": 2.3026
+      }
+    }
+  ],
+  "change_points": [
+    {
+      "index": 32,
+      "t_statistic": -2.944,
+      "note": "exploratory; not corrected for multiple scans"
+    }
+  ],
+  "candidate_patterns": [
+    {
+      "name": "number_distribution_not_uniform",
+      "statistic": 10.8235,
+      "df": 9,
+      "p_value": 0.287999,
+      "expected_per_category": 6.8,
+      "sample_size": 68,
+      "limitation": "",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "colour_distribution_vs_uniform_number_baseline",
+      "statistic": 3.0294,
+      "df": 3,
+      "p_value": 0.387113,
+      "expected_counts": [
+        27.2,
+        27.2,
+        6.8,
+        6.8
+      ],
+      "sample_size": 68,
+      "limitation": "",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "big_small_distribution_not_50_50",
+      "statistic": 2.1176,
+      "df": 1,
+      "p_value": 0.14561,
+      "expected_counts": [
+        34.0,
+        34.0
+      ],
+      "sample_size": 68,
+      "limitation": "",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "odd_even_distribution_not_50_50",
+      "statistic": 1.4706,
+      "df": 1,
+      "p_value": 0.225253,
+      "expected_counts": [
+        34.0,
+        34.0
+      ],
+      "sample_size": 68,
+      "limitation": "",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "runs_odd_even",
+      "runs": 30,
+      "expected_runs": 34.26,
+      "z": -1.0655,
+      "p_value": 0.28663,
+      "n": 68,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space.",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "runs_big_small",
+      "runs": 32,
+      "expected_runs": 33.94,
+      "z": -0.4898,
+      "p_value": 0.624245,
+      "n": 68,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "runs_repeat_number",
+      "runs": 15,
+      "expected_runs": 13.54,
+      "z": 0.988,
+      "p_value": 0.32314,
+      "n": 67,
+      "limitation": "Tests only the binary recoding supplied; not the full outcome space.",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "number_transition_dependence",
+      "observed": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          2,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          0,
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1
+        ]
+      ],
+      "expected": [
+        [
+          0.37,
+          0.22,
+          0.67,
+          0.15,
+          0.67,
+          0.37,
+          0.67,
+          0.67,
+          0.52,
+          0.67
+        ],
+        [
+          0.22,
+          0.13,
+          0.4,
+          0.09,
+          0.4,
+          0.22,
+          0.4,
+          0.4,
+          0.31,
+          0.4
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ],
+        [
+          0.15,
+          0.09,
+          0.27,
+          0.06,
+          0.27,
+          0.15,
+          0.27,
+          0.27,
+          0.21,
+          0.27
+        ],
+        [
+          0.6,
+          0.36,
+          1.07,
+          0.24,
+          1.07,
+          0.6,
+          1.07,
+          1.07,
+          0.84,
+          1.07
+        ],
+        [
+          0.37,
+          0.22,
+          0.67,
+          0.15,
+          0.67,
+          0.37,
+          0.67,
+          0.67,
+          0.52,
+          0.67
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ],
+        [
+          0.75,
+          0.45,
+          1.34,
+          0.3,
+          1.34,
+          0.75,
+          1.34,
+          1.34,
+          1.04,
+          1.34
+        ],
+        [
+          0.52,
+          0.31,
+          0.94,
+          0.21,
+          0.94,
+          0.52,
+          0.94,
+          0.94,
+          0.73,
+          0.94
+        ],
+        [
+          0.67,
+          0.4,
+          1.21,
+          0.27,
+          1.21,
+          0.67,
+          1.21,
+          1.21,
+          0.94,
+          1.21
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 51.3893,
+      "df": 81,
+      "p_value": 0.995825,
+      "min_expected": 0.06,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "colour_transition_dependence",
+      "observed": [
+        [
+          18,
+          9,
+          4,
+          2
+        ],
+        [
+          12,
+          9,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          0
+        ]
+      ],
+      "expected": [
+        [
+          16.75,
+          11.33,
+          2.46,
+          2.46
+        ],
+        [
+          12.18,
+          8.24,
+          1.79,
+          1.79
+        ],
+        [
+          2.54,
+          1.72,
+          0.37,
+          0.37
+        ],
+        [
+          2.54,
+          1.72,
+          0.37,
+          0.37
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 5.4726,
+      "df": 9,
+      "p_value": 0.791322,
+      "min_expected": 0.37,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "size_transition_dependence",
+      "observed": [
+        [
+          12,
+          15
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "expected": [
+        [
+          11.28,
+          15.72
+        ],
+        [
+          16.72,
+          23.28
+        ]
+      ],
+      "transitions": 67,
+      "statistic": 0.1309,
+      "df": 1,
+      "p_value": 0.71751,
+      "min_expected": 11.28,
+      "limitation": "Transition chi-square is unreliable when expected counts < 5.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "distribution_stability_halves",
+      "statistic": 9.9746,
+      "df": 9,
+      "p_value": 0.352545,
+      "min_expected": 1.0,
+      "sample_sizes": [
+        34,
+        34
+      ],
+      "limitation": "Expected counts below 5 invalidate the approximation.",
+      "p_value_adjusted_bh": 0.88483,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "autocorrelation_lag_1",
+      "p_value": 0.938534,
+      "statistic": -0.0096,
+      "sample_size": 67,
+      "limitation": "Approximate Fisher transform; multiple lags require correction.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "autocorrelation_lag_2",
+      "p_value": 0.857021,
+      "statistic": 0.0227,
+      "sample_size": 66,
+      "limitation": "Approximate Fisher transform; multiple lags require correction.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "autocorrelation_lag_3",
+      "p_value": 0.92532,
+      "statistic": -0.0119,
+      "sample_size": 65,
+      "limitation": "Approximate Fisher transform; multiple lags require correction.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "autocorrelation_lag_4",
+      "p_value": 0.497497,
+      "statistic": -0.0866,
+      "sample_size": 64,
+      "limitation": "Approximate Fisher transform; multiple lags require correction.",
+      "p_value_adjusted_bh": 0.994994,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    },
+    {
+      "name": "autocorrelation_lag_5",
+      "p_value": 0.67493,
+      "statistic": 0.0541,
+      "sample_size": 63,
+      "limitation": "Approximate Fisher transform; multiple lags require correction.",
+      "p_value_adjusted_bh": 0.995825,
+      "significant_after_bh": false,
+      "validation_status": "not_significant"
+    }
+  ],
+  "multiple_testing": {
+    "method": "Benjamini-Hochberg FDR",
+    "alpha": 0.05,
+    "tests": 16
+  },
+  "limitations": [
+    "Small, gappy sample: most tests have low statistical power.",
+    "A significant historical pattern is not proof of future predictability.",
+    "Change-point scans are exploratory and not corrected for repeated scanning.",
+    "Colour categories overlap (0 and 5 include violet), so colour tests are not independent."
+  ]
+}

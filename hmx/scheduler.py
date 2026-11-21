@@ -4,8 +4,9 @@ from __future__ import annotations
 import hashlib
 from datetime import datetime, timezone
 
-from .engine import EngineConfig, predict
+from .engine import EngineConfig
 from .evaluation import evaluate
+from .models import build_prediction
 from .providers.wingo_public import PeriodState, Schedule
 from .rules import colour_for, size_for
 
@@ -20,9 +21,12 @@ class PeriodTracker:
 
     def __init__(self, store, config: EngineConfig | dict | None = None,
                  *, late_threshold_seconds: float = 20.0,
-                 late_prediction_seconds: float = 30.0):
+                 late_prediction_seconds: float = 30.0,
+                 model_name: str = "hybrid", validation_status: str = "unproven"):
         self.store = store
         self.config = config if isinstance(config, EngineConfig) else EngineConfig.from_dict(config)
+        self.model_name = model_name
+        self.validation_status = validation_status
         self.current_period: str | None = None
         self.current_end_ms: int | None = None
         self.seen: set[str] = set()
@@ -79,7 +83,12 @@ class PeriodTracker:
         if latest_snapshot:
             results = [r for r in results if str(r["period_id"]) <= latest_snapshot]
         cutoff = results[-1]["period_id"] if results else None
-        prediction = predict(results, self.config, data_cutoff_period=cutoff)
+        prediction = build_prediction(
+            results, model_name=self.model_name, config=self.config,
+            data_cutoff_period=cutoff,
+            data_quality_status=("gapped_history" if self.store.integrity_check()["missing_period_count"]
+                                 else "complete"),
+            validation_status=self.validation_status)
         if prediction.status != "ok":
             self.store.log_event("WARN", "prediction_insufficient_data",
                                  period_id=period_id, sample_count=prediction.sample_count)

@@ -54,7 +54,10 @@ class AppState:
             "weights": self.config.engine_weights,
         })
         self.engine_config_json = self.engine_config.to_dict()
-        self.tracker = PeriodTracker(self.store, self.engine_config)
+        self.tracker = PeriodTracker(
+            self.store, self.engine_config,
+            model_name=self.config.model_name,
+            validation_status=self.config.model_validation_status)
         self.collector = Collector(self.config, self.store, scheduler=self.tracker,
                                    logger=JsonLogger(self.config.log_dir / "collector.jsonl", "collector"))
         self.limiter = RateLimiter(self.config.rate_limit_per_minute)
