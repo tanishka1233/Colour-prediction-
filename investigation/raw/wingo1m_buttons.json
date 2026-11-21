@@ -1,0 +1,67 @@
+[
+  {
+    "tag": "BUTTON",
+    "cls": "btn",
+    "text": "Login"
+  },
+  {
+    "tag": "DIV",
+    "cls": "s11-tabbar",
+    "text": "HomePromoEarnProfile"
+  },
+  {
+    "tag": "DIV",
+    "cls": "s11-tabbar__items",
+    "text": "HomePromoEarnProfile"
+  },
+  {
+    "tag": "DIV",
+    "cls": "s11-tabbar__side",
+    "text": "HomePromo"
+  },
+  {
+    "tag": "BUTTON",
+    "cls": "s11-tabbar__item",
+    "text": "Home"
+  },
+  {
+    "tag": "SPAN",
+    "cls": "s11-tabbar__text",
+    "text": "Home"
+  },
+  {
+    "tag": "BUTTON",
+    "cls": "s11-tabbar__item",
+    "text": "Promo"
+  },
+  {
+    "tag": "SPAN",
+    "cls": "s11-tabbar__text",
+    "text": "Promo"
+  },
+  {
+    "tag": "DIV",
+    "cls": "s11-tabbar__side",
+    "text": "EarnProfile"
+  },
+  {
+    "tag": "BUTTON",
+    "cls": "s11-tabbar__item",
+    "text": "Earn"
+  },
+  {
+    "tag": "SPAN",
+    "cls": "s11-tabbar__text",
+    "text": "Earn"
+  },
+  {
+    "tag": "BUTTON",
+    "cls": "s11-tabbar__item",
+    "text": "Profile"
+  },
+  {
+    "tag": "SPAN",
+    "cls": "s11-tabbar__text",
+    "text": "Profile"
+  }
+]

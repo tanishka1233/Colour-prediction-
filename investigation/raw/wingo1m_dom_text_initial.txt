@@ -1,0 +1,6 @@
+EN
++91
+Remember password
+Forgot Password
+Login
+Register Now

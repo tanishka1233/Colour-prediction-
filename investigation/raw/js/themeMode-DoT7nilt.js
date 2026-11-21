@@ -1,0 +1,1 @@
+var e={92:`light`,ar_saas08:`light`,ar_saas09:`dark`,lightBlue:`light`,blue:`dark`,deepOrange:`dark`,deepYellow:`dark`,darkBlue:`dark`,darkBlue07:`dark`,darkPurple:`dark`,darkRed:`dark`,ar_saas13:`dark`,ar_saas13_2:`dark`,ar_saas15:`dark`,ar_saas16:`dark`},t=t=>t&&e[t]?e[t]:`light`;export{t as n,e as t};

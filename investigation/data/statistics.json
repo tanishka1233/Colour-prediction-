@@ -1,0 +1,53 @@
+{
+  "sample_size": 46,
+  "range": [
+    "20261121100010270",
+    "20261121100010337"
+  ],
+  "number_counts": {
+    "0": 2,
+    "1": 1,
+    "2": 5,
+    "3": 2,
+    "4": 6,
+    "5": 4,
+    "6": 4,
+    "7": 9,
+    "8": 6,
+    "9": 7
+  },
+  "colour_counts": {
+    "green": 19,
+    "red,violet": 2,
+    "red": 21,
+    "green,violet": 4
+  },
+  "size_counts": {
+    "Big": 30,
+    "Small": 16
+  },
+  "unique_ids": true,
+  "ordered": true,
+  "number_range_valid": true,
+  "missing_periods_in_range": 22,
+  "gaps": [
+    [
+      303,
+      324,
+      22
+    ]
+  ],
+  "consecutive_repeats": 4,
+  "repeat_dist": {
+    "7": 2,
+    "9": 1,
+    "8": 1
+  },
+  "longest_streaks": {
+    "number": 2,
+    "colour": 4,
+    "size": 6
+  },
+  "chi_square_uniform_df9": 12.261,
+  "colour_rule_mismatches": []
+}

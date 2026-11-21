@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0713">
+  <title>HMX Predictor</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">HMX <span>PREDICTOR</span></div>
+        <div class="subtitle" id="gameLabel">WinGo 1M · read-only analysis</div>
+      </div>
+      <div class="status-pill" id="statusPill">connecting…</div>
+    </header>
+
+    <div class="notice">HMX Predictor provides statistical analysis and experimental predictions. Results are random and predictions are not guaranteed.</div>
+
+    <main>
+      <!-- HOME -->
+      <section class="screen active" id="screen-home">
+        <div class="hero card">
+          <div class="row-between">
+            <div>
+              <div class="label">CURRENT PERIOD</div>
+              <div class="big" id="currentPeriod">—</div>
+            </div>
+            <div class="countdown" id="countdown">--:--</div>
+          </div>
+          <div class="row-between muted small">
+            <span id="currentWindow">waiting for server schedule</span>
+            <span id="nextPeriod">next —</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="row-between">
+            <div class="label">LATEST RESULT</div>
+            <div class="small muted" id="latestResultTime">—</div>
+          </div>
+          <div id="latestResult" class="empty">No result collected yet.</div>
+        </div>
+
+        <div class="card">
+          <div class="row-between">
+            <div class="label">UPCOMING PREDICTION</div>
+            <div id="predictionStatus" class="chip">—</div>
+          </div>
+          <div id="latestPrediction" class="empty">No prediction yet. The local collector creates one at each server-observed period transition.</div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="label">NUMBER PROBABILITIES</div>
+            <div id="numberBars" class="empty">No model output yet.</div>
+          </div>
+          <div class="card">
+            <div class="label">COLOUR / SIZE</div>
+            <div id="colourBars" class="empty">No model output yet.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="row-between">
+            <div class="label">COLLECTOR / DATA FRESHNESS</div>
+            <div class="small muted" id="lastUpdate">—</div>
+          </div>
+          <div id="collectorStatus" class="small">Loading…</div>
+        </div>
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="screen" id="screen-analytics">
+        <div class="card">
+          <div class="row-between">
+            <div class="label">NUMBER FREQUENCY</div>
+            <div class="small muted" id="sampleSize">—</div>
+          </div>
+          <div id="analyticsNumbers" class="empty">No results loaded.</div>
+        </div>
+        <div class="card">
+          <div class="label">COLOUR &amp; BIG/SMALL DISTRIBUTION</div>
+          <div id="analyticsColours" class="empty">No results loaded.</div>
+        </div>
+        <div class="card">
+          <div class="label">HISTORICAL PATTERNS</div>
+          <div id="analyticsPatterns" class="empty">No results loaded.</div>
+        </div>
+      </section>
+
+      <!-- HISTORY -->
+      <section class="screen" id="screen-history">
+        <div class="card">
+          <div class="row-between">
+            <div class="label">HISTORICAL RESULTS</div>
+            <div class="small muted" id="historyMeta">—</div>
+          </div>
+          <div id="historyList" class="empty">No results yet.</div>
+        </div>
+      </section>
+
+      <!-- ACCURACY -->
+      <section class="screen" id="screen-accuracy">
+        <div class="card">
+          <div class="label">PREDICTION LIFECYCLE</div>
+          <div id="lifecycleSummary" class="empty">No predictions yet.</div>
+        </div>
+        <div class="card">
+          <div class="label">ACCURACY &amp; BASELINE</div>
+          <div id="accuracySummary" class="empty">No evaluated predictions yet.</div>
+        </div>
+        <div class="card">
+          <div class="label">CALIBRATION</div>
+          <div id="calibrationInfo" class="empty">No calibration data yet.</div>
+        </div>
+        <div class="card">
+          <div class="label">RECENT EVALUATIONS</div>
+          <div id="accuracyList" class="empty">Nothing evaluated yet.</div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="screen" id="screen-settings">
+        <div class="card">
+          <div class="label">DATA PROVIDER STATUS</div>
+          <div id="sourceStatus" class="small">Loading…</div>
+        </div>
+        <div class="card">
+          <div class="label">LOCAL COLLECTOR</div>
+          <div class="button-row">
+            <button id="collectNow">Collect now</button>
+            <button id="startCollector" class="ghost">Start</button>
+            <button id="stopCollector" class="ghost">Stop</button>
+          </div>
+          <div class="small muted" id="collectorActionResult">Manual collection uses the same polite read-only provider.</div>
+        </div>
+        <div class="card">
+          <div class="label">PREDICTION CONFIGURATION</div>
+          <div id="predictionConfig" class="small">Loading…</div>
+          <div class="row-between" style="margin-top:10px">
+            <input id="windowInput" type="number" min="10" max="5000" value="200">
+            <button id="saveWindow">Save window</button>
+          </div>
+          <div class="small muted">Analysis window = number of past results used by the engine. Other weights are set in .env and read at startup.</div>
+        </div>
+        <div class="card">
+          <div class="label">DATA / BACKUP</div>
+          <div class="button-row">
+            <button id="backupDb">Database backup</button>
+            <button id="exportCsv">Export CSV</button>
+            <button id="exportJson">Export JSON</button>
+            <label class="button file ghost">Import CSV/JSON<input id="importFile" type="file" accept=".csv,.json" hidden></label>
+          </div>
+          <div class="small muted" id="importResult"></div>
+        </div>
+        <div class="card disclaimer">
+          Undocumented public read-only feeds are used with ETag-aware polling. They are not
+          official APIs; results may be delayed or unavailable. This app never logs in, bets,
+          deposits or withdraws. GitHub Actions is optional and is not required for local predictions.
+        </div>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tab active" data-screen="home"><span>⌂</span>Home</button>
+      <button class="tab" data-screen="analytics"><span>▤</span>Analytics</button>
+      <button class="tab" data-screen="history"><span>≡</span>History</button>
+      <button class="tab" data-screen="accuracy"><span>◎</span>Accuracy</button>
+      <button class="tab" data-screen="settings"><span>⚙</span>Settings</button>
+    </nav>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

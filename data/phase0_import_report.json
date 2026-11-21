@@ -1,0 +1,25 @@
+{
+  "source": "/mnt/sdcard/AIProjects/prediction-ai/investigation/data/wingo_1m_history.csv",
+  "source_hash_before": "962585962c1fea1be2e7ce481b8ed33f26418aac7d3608ca6a1666df76039c6d",
+  "source_hash_after": "962585962c1fea1be2e7ce481b8ed33f26418aac7d3608ca6a1666df76039c6d",
+  "source_unchanged": true,
+  "import_stats": {
+    "inserted": 46,
+    "duplicate": 0,
+    "conflict": 0,
+    "invalid": 0,
+    "errors": []
+  },
+  "stored_results": 46,
+  "range": [
+    "20261121100010270",
+    "20261121100010337"
+  ],
+  "missing_periods": [
+    [
+      "20261121100010302",
+      "20261121100010325",
+      22
+    ]
+  ]
+}

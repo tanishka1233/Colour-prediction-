@@ -1,0 +1,64 @@
+name: Optional historical collection
+
+# SAFETY NOTES
+# - Manual execution is supported; scheduled execution is conservative (weekly).
+# - Uses ONLY the existing read-only public history provider.
+# - Never logs in, bets, or uses authenticated endpoints.
+# - The Actions runner's SQLite database is TEMPORARY and is NOT permanent storage.
+# - Results are exported as a CSV artifact. Local SQLite on your device remains
+#   the primary database. Do not commit database files to the repository.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 4 * * 0'
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run read-only historical collection (temporary DB)
+        env:
+          HMX_DB_PATH: ${{ runner.temp }}/hmx_ci.sqlite3
+          HMX_DATA_DIR: ${{ runner.temp }}
+          HMX_LOG_DIR: ${{ runner.temp }}/logs
+          HMX_PROVIDER_ENABLED: '1'
+        run: |
+          python3 -m hmx.cli collect-history --output history_summary.json
+
+      - name: Export collected results as CSV artifact
+        env:
+          HMX_DB_PATH: ${{ runner.temp }}/hmx_ci.sqlite3
+        run: |
+          python3 - <<'PY'
+          import subprocess, sys
+          # Reuse the API exporter logic without starting a server.
+          from hmx.config import CONFIG
+          from hmx.db import Store
+          from hmx.importer import export_csv
+          store = Store(CONFIG.db_path)
+          Path = __import__('pathlib').Path
+          Path('collected_results.csv').write_text(export_csv(store.all_results()), encoding='utf-8')
+          print('rows:', store.result_count())
+          PY
+
+      - name: Upload summary and CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: hmx-history-snapshot
+          path: |
+            history_summary.json
+            collected_results.csv
+          if-no-files-found: warn
+
+      - name: Persistence notice
+        run: |
+          echo "Runner storage is temporary. Import collected_results.csv into your local app with: python3 -m hmx.cli import collected_results.csv"

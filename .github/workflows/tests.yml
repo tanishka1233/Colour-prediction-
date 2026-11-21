@@ -1,0 +1,24 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run unit tests (stdlib only)
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify Phase 0 artifacts unchanged
+        run: |
+          python3 - <<'PY'
+          import hashlib, pathlib
+          p = pathlib.Path('investigation/data/wingo_1m_history.csv')
+          print('phase0_csv_sha256', hashlib.sha256(p.read_bytes()).hexdigest())
+          PY
