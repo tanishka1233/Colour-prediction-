@@ -15,8 +15,8 @@
 
 The remote already had a branch called `main-/-root` containing only `1.html` and `README.md`.
 We did **not** delete, reset or overwrite it. Our work was pushed as a **new branch** `main`.
-`git ls-remote` shows both branches. GitHub still reports the old `main-/-root` as the
-repository HEAD, so the default branch has not changed automatically.
+`git ls-remote` shows both branches. The repository default branch was changed to `main`
+using the available admin permission; the old `main-/-root` branch was preserved unchanged.
 
 ## How to push (if it was not already done)
 

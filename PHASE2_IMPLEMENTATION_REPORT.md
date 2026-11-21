@@ -52,9 +52,8 @@ Acceptance checks covered: Phase 0 import (46 records, source hash unchanged), d
 - Initial commit: `0d6672f` — "Initial import: HMX Predictor Phase 1 + Phase 2 reliability, SQLite integrity, CI workflows".
 - Remote was added as `origin` pointing to the URL you supplied.
 - **Push succeeded.** Our code is on remote branch `main` at commit `7a3e276`.
-  The old remote branch `main-/-root` was left untouched; the repository HEAD still
-  points to that old branch, so you may want to change the default branch to `main`
-  or open a Pull Request from `main` into `main-/-root`.
+  The old remote branch `main-/-root` was left untouched. During final verification
+  the repository default branch was changed from `main-/-root` to `main`.
 - No secrets, runtime SQLite files, logs or backups were committed.
 - GitHub Actions: configured (files present). Actual cloud run status must be confirmed
   on GitHub; no Actions job was executed locally in this session.
